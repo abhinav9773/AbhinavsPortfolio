@@ -1,5 +1,4 @@
 import ProjectCard from "../components/ProjectCard";
-
 import algoImg from "../assets/projects/algorithms.png";
 import weatherImg from "../assets/projects/weather.png";
 import vitImg from "../assets/projects/vit.png";

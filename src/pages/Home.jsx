@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Scene from "../three/Scene";
 import TypingText from "../components/TypingText";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [opacity, setOpacity] = useState(1);
@@ -72,13 +73,13 @@ const Home = () => {
 
           {/* CTA */}
           <div className="mt-12">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm"
             >
               Explore projects
               <span className="ml-2">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
