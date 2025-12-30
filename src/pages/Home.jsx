@@ -73,7 +73,7 @@ const Home = () => {
           {/* CTA */}
           <div className="mt-12">
             <a
-              href="projects"
+              href="/projects"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm"
             >
               Explore projects
