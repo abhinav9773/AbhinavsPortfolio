@@ -18,18 +18,24 @@ const Home = () => {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[160vh]">
+      <section className="relative h-[160vh] pt-24 sm:pt-0">
         <div
-          className="sticky top-0 h-screen grid md:grid-cols-2 items-center px-12 transition-opacity duration-300"
+          className="
+            sticky top-0 h-screen
+            grid grid-cols-1 md:grid-cols-2
+            items-center
+            px-6 md:px-12
+            transition-opacity duration-300
+          "
           style={{ opacity }}
         >
           {/* LEFT */}
           <div className="max-w-xl">
-            <h1 className="text-[3.25rem] font-semibold leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-[2.25rem] md:text-[3.25rem] font-semibold leading-[1.1] tracking-tight mb-6">
               Hi, I’m Abhinav
             </h1>
 
-            <p className="text-lg mb-6 text-slate-300">
+            <p className="text-base md:text-lg mb-6 text-slate-300">
               <TypingText />
             </p>
 
@@ -39,13 +45,13 @@ const Home = () => {
               clarity, structure, and thoughtful interaction.
             </p>
 
-            <p className="mt-12 text-xs text-slate-500 tracking-wide">
+            <p className="mt-10 md:mt-12 text-xs text-slate-500 tracking-wide">
               Scroll to explore selected work
             </p>
           </div>
 
           {/* RIGHT */}
-          <div className="h-screen w-full">
+          <div className="h-[320px] md:h-screen w-full mt-10 md:mt-0">
             <Scene />
           </div>
         </div>
@@ -53,8 +59,8 @@ const Home = () => {
 
       {/* NEXT CONTENT */}
       <section className="bg-[#0b0f19]">
-        <div className="max-w-5xl mx-auto px-8 pt-8 pb-24">
-          <h2 className="text-3xl font-semibold mb-6 tracking-tight">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 pt-8 pb-24">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">
             What I focus on
           </h2>
 
