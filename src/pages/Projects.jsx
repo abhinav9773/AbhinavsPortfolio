@@ -25,12 +25,12 @@ const projects = [
     github: "https://github.com/abhinav9773/Weather-Dashboard",
   },
   {
-    title: "VIT Co-Relation Platform",
+    title: "VIT Co-Creation Platform",
     description:
       "A centralized platform at VIT connecting alumni and corporate relations to improve communication and collaboration.",
     tags: ["React", "Web Platform", "UI"],
     image: vitImg,
-    demo: "https://co-relation-platform-vit.vercel.app",
+    demo: "https://co-creation-platform-vit.vercel.app",
     github: "https://github.com/abhinav9773/Co-Relation-Platform-VIT",
   },
   {
