@@ -1,4 +1,5 @@
 import ProjectCard from "../components/ProjectCard";
+import UrbanImg from "../assets/projects/UrbanWatch.png";
 import algoImg from "../assets/projects/algorithms.png";
 import weatherImg from "../assets/projects/weather.png";
 import vitImg from "../assets/projects/vit.png";
@@ -6,6 +7,15 @@ import vionyxImg from "../assets/projects/vionyx.png";
 import pigDiceImg from "../assets/projects/pigdice.png";
 
 const projects = [
+  {
+    title: "UrbanWatch",
+    description:
+      "A platform connecting engineers to local people for reporting and resolving locality issues.",
+    tags: ["React", "Node.js", "MongoDB"],
+    image: UrbanImg,
+    demo: "https://urban-watch-frontend.vercel.app",
+    github: "https://github.com/abhinav9773/UrbanWatch-frontend",
+  },
   {
     title: "Algorithm Visualizer",
     description:
