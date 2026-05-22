@@ -11,6 +11,11 @@
 
 body {
   font-family: "Work Sans", sans-serif;
+  background: #0b0f19;
+  color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -21,59 +26,69 @@ body:has(.card[data-color="green"]:hover) {
   background-color: rgb(var(--green-rgb) / 25%);
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(96, 165, 250, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(96, 165, 250, 0.35);
+}
+
+::selection {
+  background: rgba(96, 165, 250, 0.2);
+  color: #f1f5f9;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
   .max-container {
     @apply max-w-5xl mx-auto pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
-
   .head-text {
     @apply text-3xl font-semibold leading-snug font-poppins;
   }
-
   .subhead-text {
     @apply font-semibold text-xl relative font-poppins;
   }
-
   .blue-gradient_text {
     @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
   }
-
   .input {
     @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
   }
-
   .textarea {
     @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
   }
-
   .btn {
     @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center;
   }
-
   .header {
     @apply flex justify-between items-center px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
   }
-
   .footer {
     @apply max-w-5xl mx-auto pb-6 px-8 flex flex-col gap-7;
   }
-
   .footer-container {
     @apply flex flex-wrap gap-7 items-center justify-between;
   }
-
   .info-box {
     @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
   }
-
   .neo-btn {
     @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
   }
-
   .cta {
     @apply w-full flex items-center flex-col mt-8 gap-7;
   }
-
   .cta-text {
     @apply text-black-500 font-extrabold flex-1 text-3xl text-center;
   }
@@ -90,7 +105,8 @@ body:has(.card[data-color="green"]:hover) {
 .logo {
   border-radius: 8.889px;
   background: #fff;
-  box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
+  box-shadow:
+    0px 10px 35px -4px rgba(67, 83, 255, 0.15),
     0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
 }
 
@@ -117,27 +133,21 @@ body:has(.card[data-color="green"]:hover) {
 .block-container .btn-back-red {
   background: linear-gradient(135deg, #ff4b1f -20%, #ff9068 120%);
 }
-
 .block-container .btn-back-green {
   background: linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%);
 }
-
 .block-container .btn-back-yellow {
   background: linear-gradient(135deg, #f7971e -20%, #ffd200 120%);
 }
-
 .block-container .btn-back-blue {
   background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
 }
-
 .block-container .btn-back-orange {
   background: linear-gradient(135deg, #ff0f7b -20%, #f89b29 120%);
 }
-
 .block-container .btn-back-pink {
   background: linear-gradient(135deg, #e81cff -20%, #40c9ff 120%);
 }
-
 .block-container .btn-back-black {
   background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
 }
@@ -160,28 +170,35 @@ body:has(.card[data-color="green"]:hover) {
 .block-container:hover > .btn-back {
   transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
 }
-
 .block-container:hover > .btn-front {
   transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
 }
 
-/* Neo Brutalism */
 .neo-brutalism-blue {
   background: #2b77e7;
   position: relative;
   border-radius: 10px;
   border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  box-shadow:
+    0.6vmin 0.6vmin #336cc1,
+    1vmin 1vmin #0092db,
+    1vmin 1vmin #0092db,
+    0.65vmin 1vmin #0092db,
+    1vmin 0.65vmin #0092db;
 }
 
 .neo-brutalism-white {
   background: #fff;
   border: #fff;
-  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
-    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+  box-shadow:
+    0.6vmin 0.6vmin #fff,
+    1vmin 1vmin #d2e4ff,
+    1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff,
+    1vmin 0.65vmin #d2e4ff;
 }
 
+/* ── Animations ── */
 @keyframes borderShine {
   0% {
     background-position: 0% 50%;
@@ -189,4 +206,65 @@ body:has(.card[data-color="green"]:hover) {
   100% {
     background-position: 200% 50%;
   }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* ── Scroll-to-explore (plain text, no button styling) ── */
+.scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: rgba(100, 116, 139, 0.6);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.25s ease;
+}
+
+.scroll-btn .scroll-arrow {
+  display: inline-block;
+  animation: scrollBounce 1.6s ease-in-out infinite;
+  font-style: normal;
+}
+
+.scroll-btn:hover {
+  color: rgba(147, 197, 253, 0.85);
+}
+
+/* ── Glow link — text brightens only, no shadow, no lift ── */
+.glow-link {
+  transition: color 0.25s ease;
+}
+.glow-link:hover {
+  color: #e2e8f0 !important;
 }

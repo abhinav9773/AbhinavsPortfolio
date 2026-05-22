@@ -1,142 +1,169 @@
+import FadeIn from "../components/FadeIn";
+
+const contactItems = [
+  {
+    label: "Email",
+    description: "Best way to reach me for opportunities or conversations.",
+    link: "mailto:abhinavsharma9773@gmail.com",
+    linkText: "abhinavsharma9773@gmail.com",
+    icon: "✉",
+  },
+  {
+    label: "GitHub",
+    description: "Explore my projects, experiments, and code structure.",
+    link: "https://github.com/abhinav9773",
+    linkText: "github.com/abhinav9773",
+    icon: "⌥",
+  },
+  {
+    label: "LinkedIn",
+    description: "Professional background, experience, and network.",
+    link: "https://www.linkedin.com/in/abhinav-sharma-3a7b96316",
+    linkText: "linkedin.com/in/abhinav-sharma",
+    icon: "◈",
+  },
+];
+
 const Contact = () => {
   return (
-    <section className="bg-[#0b0f19] py-28">
+    <section
+      style={{
+        background: "linear-gradient(180deg, #0b0f19 0%, #080c15 100%)",
+        minHeight: "100vh",
+      }}
+      className="py-32"
+    >
       <div className="max-w-5xl mx-auto px-8">
         {/* HEADER */}
-        <div className="mb-16 max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6">Get in touch</h2>
-          <p className="text-slate-400 text-lg leading-relaxed">
-            I’m always open to discussing engineering roles, collaborations, or
+        <FadeIn>
+          <h2
+            className="font-bold mb-6 leading-tight"
+            style={{
+              fontSize: "clamp(2rem, 4vw, 3rem)",
+              fontFamily: "'Georgia', serif",
+              color: "#f1f5f9",
+            }}
+          >
+            Get in touch
+          </h2>
+          <p
+            className="text-lg leading-relaxed max-w-xl"
+            style={{ color: "rgba(148,163,184,0.8)" }}
+          >
+            I'm always open to discussing engineering roles, collaborations, or
             interesting problems worth solving.
           </p>
-        </div>
+        </FadeIn>
 
         {/* CONTACT GRID */}
-        <div className="grid md:grid-cols-3 gap-10">
-          {/* EMAIL */}
-          <div className="relative group">
-            {/* Border shine */}
-            <div
-              className="
-                pointer-events-none
-                absolute inset-0 rounded-[18px]
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-300
-                z-20
-              "
-              style={{
-                padding: "1px",
-                background:
-                  "linear-gradient(120deg, transparent 20%, rgba(96,165,250,0.9), transparent 80%)",
-                backgroundSize: "200% 200%",
-                animation: "borderShine 1.6s linear infinite",
-                WebkitMask:
-                  "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-                WebkitMaskComposite: "xor",
-                maskComposite: "exclude",
-              }}
-            />
-
-            <div className="relative z-10 rounded-[18px] bg-[#0f172a] p-6 border border-white/10">
-              <h3 className="text-slate-200 font-semibold mb-2">Email</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                Best way to reach me for opportunities or conversations.
-              </p>
-              <a
-                href="mailto:abhinavsharma9773@gmail.com"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+        <div className="grid md:grid-cols-3 gap-5 mt-16">
+          {contactItems.map((item, i) => (
+            <FadeIn key={item.label} delay={i * 80}>
+              <div
+                className="group relative rounded-2xl p-6 h-full transition-all duration-300"
+                style={{
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+                  e.currentTarget.style.borderColor = "rgba(96,165,250,0.18)";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.03)";
+                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                }}
               >
-                Send an email →
-              </a>
-            </div>
-          </div>
+                <div
+                  className="mb-5 w-10 h-10 rounded-xl flex items-center justify-center text-lg"
+                  style={{
+                    background: "rgba(96,165,250,0.08)",
+                    border: "1px solid rgba(96,165,250,0.15)",
+                    color: "rgba(147,197,253,0.7)",
+                    fontFamily: "monospace",
+                  }}
+                >
+                  {item.icon}
+                </div>
 
-          {/* GITHUB */}
-          <div className="relative group">
-            {/* Border shine */}
-            <div
-              className="
-                pointer-events-none
-                absolute inset-0 rounded-[18px]
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-300
-                z-20
-              "
-              style={{
-                padding: "1px",
-                background:
-                  "linear-gradient(120deg, transparent 20%, rgba(96,165,250,0.9), transparent 80%)",
-                backgroundSize: "200% 200%",
-                animation: "borderShine 1.6s linear infinite",
-                WebkitMask:
-                  "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-                WebkitMaskComposite: "xor",
-                maskComposite: "exclude",
-              }}
-            />
+                <h3
+                  className="font-semibold mb-2"
+                  style={{ color: "#e2e8f0", fontSize: "0.95rem" }}
+                >
+                  {item.label}
+                </h3>
+                <p
+                  className="text-sm leading-relaxed mb-5"
+                  style={{ color: "rgba(148,163,184,0.6)" }}
+                >
+                  {item.description}
+                </p>
 
-            <div className="relative z-10 rounded-[18px] bg-[#0f172a] p-6 border border-white/10">
-              <h3 className="text-slate-200 font-semibold mb-2">GitHub</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                Explore my projects, experiments, and code structure.
-              </p>
-              <a
-                href="https://github.com/abhinav9773"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                View GitHub profile →
-              </a>
-            </div>
-          </div>
-
-          {/* LINKEDIN */}
-          <div className="relative group">
-            {/* Border shine */}
-            <div
-              className="
-                pointer-events-none
-                absolute inset-0 rounded-[18px]
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-300
-                z-20
-              "
-              style={{
-                padding: "1px",
-                background:
-                  "linear-gradient(120deg, transparent 20%, rgba(96,165,250,0.9), transparent 80%)",
-                backgroundSize: "200% 200%",
-                animation: "borderShine 1.6s linear infinite",
-                WebkitMask:
-                  "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-                WebkitMaskComposite: "xor",
-                maskComposite: "exclude",
-              }}
-            />
-
-            <div className="relative z-10 rounded-[18px] bg-[#0f172a] p-6 border border-white/10">
-              <h3 className="text-slate-200 font-semibold mb-2">LinkedIn</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                Professional background and experience.
-              </p>
-              <a
-                href="https://www.linkedin.com/in/abhinav-sharma-3a7b96316"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                Connect on LinkedIn →
-              </a>
-            </div>
-          </div>
+                <a
+                  href={item.link}
+                  target={item.link.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    item.link.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="glow-link text-sm font-mono block"
+                  style={{ color: "#60a5fa" }}
+                >
+                  {item.linkText} →
+                </a>
+              </div>
+            </FadeIn>
+          ))}
         </div>
 
-        {/* FOOT NOTE */}
-        <div className="mt-20 text-slate-500 text-sm max-w-2xl">
-          Currently open to frontend, full-stack, and engineering-focused
-          opportunities. Remote-friendly.
-        </div>
+        <FadeIn delay={200}>
+          <div className="mt-12 grid md:grid-cols-2 gap-5">
+            {/* CV download */}
+            <div
+              className="flex items-start gap-4 p-6 rounded-2xl"
+              style={{
+                background: "rgba(96,165,250,0.04)",
+                border: "1px solid rgba(96,165,250,0.1)",
+              }}
+            >
+              <div
+                className="mt-0.5 w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center text-lg"
+                style={{
+                  background: "rgba(96,165,250,0.08)",
+                  border: "1px solid rgba(96,165,250,0.15)",
+                  color: "rgba(147,197,253,0.7)",
+                }}
+              >
+                ↓
+              </div>
+              <div>
+                <p
+                  className="text-sm font-medium mb-1"
+                  style={{ color: "#bfdbfe" }}
+                >
+                  Resume
+                </p>
+                <p
+                  className="text-sm mb-3"
+                  style={{ color: "rgba(148,163,184,0.65)" }}
+                >
+                  Download my latest resume for a full overview.
+                </p>
+                <a
+                  href="/Abhinav's_Resume.pdf"
+                  download
+                  className="glow-link text-sm font-mono"
+                  style={{ color: "#60a5fa" }}
+                >
+                  Download Resume →
+                </a>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
