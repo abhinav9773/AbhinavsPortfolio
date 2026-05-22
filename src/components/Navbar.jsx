@@ -100,7 +100,7 @@ const Navbar = () => {
             e.currentTarget.style.color = "rgba(147,197,253,0.8)";
           }}
         >
-          ↓ CV
+          ↓ Resume
         </a>
       </nav>
     </div>
