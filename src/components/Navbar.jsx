@@ -80,8 +80,8 @@ const Navbar = () => {
 
         {/* CV BUTTON */}
         <a
-          href="/Abhinav's_Resume.pdf"
-          download
+          href="/Abhinavs_Resume.pdf"
+          download="Abhinavs_Resume.pdf"
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono transition-all duration-200"
           style={{
             color: "rgba(147,197,253,0.8)",
