@@ -1,13 +1,35 @@
 import ProjectCard from "../components/ProjectCard";
 import FadeIn from "../components/FadeIn";
+import PlacementPilotImg from "../assets/projects/PlacementPilot.png";
+import OSTutorImg from "../assets/projects/OSTutor.png";
 import UrbanImg from "../assets/projects/UrbanWatch.png";
-import algoImg from "../assets/projects/algorithms.png";
 import weatherImg from "../assets/projects/weather.png";
 import vitImg from "../assets/projects/vit.png";
 import vionyxImg from "../assets/projects/vionyx.png";
-import pigDiceImg from "../assets/projects/pigdice.png";
 
 const projects = [
+  {
+    title: "Placement Pilot AI",
+    description:
+      "An AI-powered placement platform that helps students practice interviews and prepare for recruitment.",
+    tags: ["AI", "React", "LLM"],
+    image: PlacementPilotImg,
+    demo: "https://placementpilotai.vercel.app",
+    github: "https://github.com/abhinav9773/PlacementPilotAI",
+    featured: true,
+  },
+
+  {
+    title: "OS RAG Tutor",
+    description:
+      "An interactive AI tutor that uses RAG to teach Operating Systems through course materials.",
+    tags: ["RAG", "FastAPI", "React", "ChromaDB"],
+    image: OSTutorImg,
+    demo: "https://os-tutor.vercel.app",
+    github: "https://github.com/abhinav9773/OSTutor",
+    featured: true,
+  },
+
   {
     title: "UrbanWatch",
     description:
@@ -18,16 +40,7 @@ const projects = [
     github: "https://github.com/abhinav9773/UrbanWatch-frontend",
     featured: true,
   },
-  {
-    title: "Algorithm Visualizer",
-    description:
-      "Interactive visualizations for divide-and-conquer and graph algorithms to make learning intuitive.",
-    tags: ["Algorithms", "Visualization", "JavaScript"],
-    image: algoImg,
-    demo: "https://algorithm-visualizer-kndma.vercel.app",
-    github: "https://github.com/abhinav9773/algorithm-visualizer",
-    featured: true,
-  },
+
   {
     title: "Weather Dashboard",
     description:
@@ -37,6 +50,7 @@ const projects = [
     demo: "https://weather--dashboard.vercel.app",
     github: "https://github.com/abhinav9773/Weather-Dashboard",
   },
+
   {
     title: "VIT Co-Creation Platform",
     description:
@@ -46,6 +60,7 @@ const projects = [
     demo: "https://co-creation-platform-vit.vercel.app",
     github: "https://github.com/abhinav9773/Co-Relation-Platform-VIT",
   },
+
   {
     title: "Vionyx",
     description:
@@ -54,15 +69,6 @@ const projects = [
     image: vionyxImg,
     demo: "https://vionyx.vercel.app",
     github: "https://github.com/abhinav9773/VIONYX",
-  },
-  {
-    title: "Pig Dice Game",
-    description:
-      "A browser-based dice game featuring simple logic, turn-based gameplay, and a clean interactive UI.",
-    tags: ["JavaScript", "Game Logic", "Frontend"],
-    image: pigDiceImg,
-    demo: "https://pig-dice-game-opal.vercel.app",
-    github: "https://github.com/abhinav9773/Pig-Dice-Game",
   },
 ];
 
